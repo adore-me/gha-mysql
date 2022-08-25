@@ -1,0 +1,36 @@
+name: 'AdoreMe Tech MySql Action'
+description: 'Run a Docker MySql instance'
+inputs:
+  version:
+    description: 'MySql version to use'
+    required: true
+    default: '5.7'
+  root-password:
+    description: 'MySql Root password'
+    required: true
+    default: 'secret'
+  user:
+    description: 'MySql user'
+    required: true
+    default: 'adoreme'
+  password:
+    description: 'MySql password'
+    required: true
+    default: 'secret'
+  db-name:
+    description: 'MySql database'
+    required: true
+    default: 'adoreme'
+
+runs:
+  using: "composite"
+  steps:
+    - name: 'Deploy MySql'
+      run: $GITHUB_ACTION_PATH/mysql.sh
+      shell: bash
+      env:
+        INPUT_VERSION: ${{ inputs.version }}
+        INPUT_ROOT_PASSWORD: ${{ inputs.root-password }}
+        INPUT_USER: ${{ inputs.user }}
+        INPUT_PASSWORD: ${{ inputs.password }}
+        INPUT_DB_NAME: ${{ inputs.db-name }}
