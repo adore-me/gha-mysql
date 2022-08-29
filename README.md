@@ -1,4 +1,4 @@
-# mysql-action
+# gha-mysql
 
 ## Description
 Run composer install with custom PHP image.
