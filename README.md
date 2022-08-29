@@ -13,7 +13,9 @@ Run composer install with custom PHP image.
 | **db-name**       | `adoreme` | Database name.              |
 
 ## Outputs
-None.
+| Key               | Value                       |
+|-------------------|-----------------------------|
+| **container-ip**  | IP address of the container |
 
 ### Example of step configuration and usage:
 ```yaml
