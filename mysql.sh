@@ -27,5 +27,5 @@ docker run \
   mysql:"$INPUT_VERSION" \
   "sh" "-c" "for i in seq 1 10; do mysqladmin ping -u root -p$INPUT_ROOT_PASSWORD -h$containerIp --connect_timeout 2 && s=0 && break || s=$? && sleep 5; done; (exit $s)"
 
-echo "${BL}Info:${NC} Set MySql container ip to: $containerIp"
+echo -e "${BL}Info:${NC} Set MySql container ip to: $containerIp"
 echo "::set-output name=container-ip::$containerIp"
