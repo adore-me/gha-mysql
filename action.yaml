@@ -21,11 +21,16 @@ inputs:
     description: 'MySql database'
     required: true
     default: 'adoreme'
+outputs:
+  container-ip:
+    description: 'Container IP'
+    value: '${{ steps.start-mysql.outputs.container-ip }}'
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: 'Deploy MySql'
+      id: start-mysql
       run: $GITHUB_ACTION_PATH/mysql.sh
       shell: bash
       env:
