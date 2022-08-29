@@ -20,7 +20,7 @@ Run composer install with custom PHP image.
 ### Example of step configuration and usage:
 ```yaml
 steps:
-  - name: 'Run Composer Install'
+  - name: 'Start MySql'
     uses: adore-me/mysql-action@master
     with:
       version: 5.7
