@@ -4,13 +4,13 @@
 Run composer install with custom PHP image.
 
 ## Inputs
-| Key               | Default   | Description                 |
-|-------------------|-----------|-----------------------------|
-| **version**       | `5.7`     | MySql version to use.       |
-| **root-password** | `secret`  | Root password.              |
-| **user**          | `adoreme` | Additional user.            |
-| **password**      | `secret`  | Additional user's password. |
-| **db-name**       | `adoreme` | Database name.              |
+| Key               | Required | Default   | Description                  |
+|-------------------|----------|-----------|------------------------------|
+| **version**       | **true** | `5.7`     | MySql version to use.        |
+| **root-password** | **true** | `secret`  | Root password.               |
+| **user**          | **true** | `adoreme` | Additional user.             |
+| **password**      | **true** | `secret`  | Additional user's password.  |
+| **db-name**       | **true** | `adoreme` | Database name.               |
 
 ## Outputs
 | Key               | Value                       |
